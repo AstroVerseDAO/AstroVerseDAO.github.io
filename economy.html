@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>经济 · 金钱与时间 — 星宙 AstroVerseDAO</title>
+<meta name="description" content="经济航向：学习投资与复利，让时间成为盟友。经济学原理 → 会计与财务 → 投资与复利 → 行为与决策。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>body { --accent: var(--earth); }</style>
+</head>
+<body class="dimmer">
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="0.7" transform="rotate(56 16 16)"/>
+    </svg>
+    <span class="brand-word">星宙<em>AstroVerseDAO</em></span>
+  </a>
+  <nav class="topnav">
+    <a href="index.html#manifesto">宣言</a>
+    <a href="index.html#directions" class="active">航向</a>
+    <a href="path.html">机制</a>
+    <a href="join.html" class="nav-cta">入院</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero wrap">
+    <p class="page-kicker reveal">第贰航向 · EARTH · 土</p>
+    <h1 class="page-title reveal">经济</h1>
+    <p class="page-lens reveal">土 · 金钱与时间</p>
+    <p class="page-why reveal"><strong>为什么学：</strong>这是五大航向的核心目的之一——学习投资与复利。钱是现代社会的基础语言，不懂它，就永远在为别人打工。经济航向不培养经济学家，它培养每一个现代人都必须具备的财务素养：理解金钱如何流动、时间如何增值、风险如何管理。</p>
+    <div class="page-pathline reveal">
+      <b>E1</b><span>经济学原理 →</span><b>E2</b><span>会计与财务 →</span><b>E3</b><span>投资与复利 →</span><b>E4</b><span>行为与决策 →</span><span>必做项目</span>
+    </div>
+  </section>
+
+  <div class="stages wrap">
+
+    <section class="stage reveal">
+      <div class="stage-marker"><span class="stage-code">E1<small>PRINCIPLES</small></span></div>
+      <div class="stage-body">
+        <h2>经济学原理</h2>
+        <p class="stage-goal">目标：建立经济学思维——稀缺、权衡、机会成本。</p>
+        <h4>学习资源 · 按顺序</h4>
+        <ul class="res-list">
+          <li>曼昆《经济学原理》 <em>全球最流行的入门教材（宏观 + 微观两册）</em></li>
+          <li>《小岛经济学》/《一课经济学》 <em>故事化的快速入门</em></li>
+          <li>货币的本质 <em>从金本位到信用货币（《债务危机》前两章是很好的补充）</em></li>
+        </ul>
+        <div class="stage-output"><b>产出</b>能解释你身边的价格（房租、工资、汇率）背后「供需 + 货币」的机制。</div>
+      </div>
+    </section>
+
+    <section class="stage reveal">
+      <div class="stage-marker"><span class="stage-code">E2<small>ACCOUNTING</small></span></div>
+      <div class="stage-body">
+        <h2>会计与财务</h2>
+        <p class="stage-goal">目标：看懂钱怎么流动——这是投资的地基。</p>
+        <h4>学习资源</h4>
+        <ul class="res-list">
+          <li>《手把手教你读财报》 <em>从三张表看懂一家公司</em></li>
+          <li>会计基础 <em>资产负债表、利润表、现金流量表的关系</em></li>
+          <li>巴菲特致股东的信（历年） <em>用大师视角读财务数字</em></li>
+        </ul>
+        <div class="stage-output"><b>产出</b>独立分析一家上市公司的三张报表，写一页「这家公司赚的是什么钱」。</div>
+      </div>
+    </section>
+
+    <section class="stage reveal">
+      <div class="stage-marker"><span class="stage-code">E3<small>INVESTING</small></span></div>
+      <div class="stage-body">
+        <h2>投资与复利</h2>
+        <p class="stage-goal">目标：建立长期、稳健、可执行的投资体系。</p>
+        <h4>学习资源</h4>
+        <ul class="res-list">
+          <li>《漫步华尔街》 <em>指数投资与有效市场</em></li>
+          <li>《穷查理宝典》 <em>多元思维模型与逆向思考</em></li>
+          <li>巴菲特/芒格投资哲学 <em>能力圈、安全边际、长期持有</em></li>
+          <li>资产配置与风险 <em>股票、债券、现金、另类资产的比例艺术</em></li>
+          <li>《这次不一样：八百年金融危机史》 <em>周期与泡沫的历史教训</em></li>
+        </ul>
+        <div class="stage-output"><b>产出</b>制定一份书面的个人资产配置方案，写清投资目标、风险承受能力与纪律。</div>
+      </div>
+    </section>
+
+    <section class="stage reveal">
+      <div class="stage-marker"><span class="stage-code">E4<small>BEHAVIOR</small></span></div>
+      <div class="stage-body">
+        <h2>行为与决策</h2>
+        <p class="stage-goal">目标：理解自己和他人的非理性——这是战胜市场的开始。</p>
+        <h4>学习资源</h4>
+        <ul class="res-list">
+          <li>丹尼尔·卡尼曼《思考，快与慢》 <em>系统 1 与系统 2</em></li>
+          <li>理查德·塞勒《“错误”的行为》 <em>行为经济学全景</em></li>
+          <li>三大投资陷阱 <em>损失厌恶、锚定效应、过度自信</em></li>
+        </ul>
+        <div class="stage-output"><b>产出</b>记录自己的 5 个非理性决策案例（可来自模拟盘），分析背后的心理机制。</div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="wrap">
+    <section class="capstone-panel reveal">
+      <p class="sec-index">必做项目</p>
+      <h2>真实小账户投资实践（12 个月）</h2>
+      <ol>
+        <li>开立一个小资金真实账户（金额自定，原则是「亏光了也不影响生活」）；</li>
+        <li>写下初始投资计划：目标、策略、纪律；</li>
+        <li>每月记录一次决策日志：买/卖/持有 + 理由 + 情绪状态；</li>
+        <li>12 个月后写复盘报告：哪些决策正确，哪些靠运气，哪些违背纪律；</li>
+        <li>报告发到 GitHub 公开——让复利和时间成为你的老师。</li>
+      </ol>
+      <p style="margin-top:18px">核心原则：投资的第一课不是「赚多少」，而是<strong>「不亏」</strong>。星宙只提供学习路径与知识框架，<strong>不构成任何投资建议</strong>——市场有风险，请务必使用闲置资金实践。</p>
+    </section>
+
+    <section class="cross reveal">
+      <p class="sec-index">航向联动</p>
+      <div class="cross-list">
+        <a href="politics.html" style="--c:#e3d9b8"><b>经济 × 政治</b>制度经济学——产权、契约与市场</a>
+        <a href="history.html" style="--c:#7fb069"><b>经济 × 历史</b>金融史与危机周期</a>
+        <a href="cosmos.html" style="--c:#7a9bb8"><b>经济 × 宇宙</b>统计陷阱与认知偏差</a>
+      </div>
+    </section>
+
+    <p class="manifesto-note reveal" style="margin-bottom:70px">经济航向的终点不是暴富，而是<strong>掌握自己的财务命运</strong>——不再为钱焦虑，不再被消费主义裹挟，让每一块钱都在为你的未来工作。</p>
+  </div>
+
+  <nav class="cycle" aria-label="航向循环导航">
+    <a href="politics.html" style="--c:#e3d9b8">
+      <span class="cyc-label">← 上一航向 · 金</span>
+      <div class="cyc-name">政治 · 权力与秩序</div>
+    </a>
+    <a href="tech.html" style="--c:#d96c4f">
+      <span class="cyc-label">下一航向 · 火 →</span>
+      <div class="cyc-name">科技 · 工具与创造</div>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="footer">
+  <span>星宙 AstroVerseDAO · 观星书院</span>
+  <span class="footer-dim">开源 · 免费 · 面向每一位求知者 — MMXXVI</span>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
