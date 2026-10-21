@@ -1,1 +1,300 @@
-PLACEHOLDER_CSS
+/* ============================================================
+   星宙 AstroVerseDAO · 观星书院（Observatory Academy）
+   设计语言：东方书院 × 深空观测站
+   · 墨黑宣纸底 + 暖纸白字 + 细金线
+   · 竖排汉字 · 宋体大标 · 等宽数据字
+   · 克制的动效：星野视差、滚动揭示、轨道描线
+   ============================================================ */
+
+:root {
+  --ink: #060608;
+  --ink-2: #0b0b10;
+  --paper: #ece4d3;
+  --paper-dim: rgba(236, 228, 211, 0.55);
+  --paper-faint: rgba(236, 228, 211, 0.32);
+  --hairline: rgba(236, 228, 211, 0.14);
+  --gold: #c9a45c;
+  --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+  --latin: "Cormorant Garamond", Georgia, serif;
+  --mono: "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.9;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: rgba(201, 164, 92, 0.3); color: #fff8e8; }
+
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb { background: #262430; border-radius: 5px; border: 2px solid var(--ink); }
+
+/* ---------- 星野画布 & 纸纹 ---------- */
+#sky {
+  position: fixed; inset: 0; z-index: 0;
+  width: 100%; height: 100%;
+}
+.grain {
+  position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+header, main, footer { position: relative; z-index: 2; }
+
+/* ---------- 顶栏 ---------- */
+.topbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid transparent;
+  transition: background 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
+}
+.topbar.scrolled {
+  background: rgba(6, 6, 8, 0.82);
+  backdrop-filter: blur(12px);
+  border-bottom-color: var(--hairline);
+  padding: 14px 40px;
+}
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--paper); }
+.brand-mark { width: 26px; height: 26px; color: var(--gold); }
+.brand-word { font-size: 17px; letter-spacing: 0.35em; font-weight: 600; }
+.brand-word em {
+  font-family: var(--mono); font-style: normal; font-size: 10px;
+  letter-spacing: 0.22em; color: var(--paper-dim); margin-left: 12px;
+}
+.topnav { display: flex; gap: 34px; }
+.topnav a {
+  color: var(--paper-dim); text-decoration: none;
+  font-size: 14px; letter-spacing: 0.3em;
+  transition: color 0.3s ease;
+}
+.topnav a:hover { color: var(--paper); }
+.topnav .nav-cta {
+  color: var(--gold);
+  border: 1px solid rgba(201, 164, 92, 0.45);
+  padding: 4px 18px; border-radius: 2px;
+}
+.topnav .nav-cta:hover { background: rgba(201, 164, 92, 0.12); color: #e8cd93; }
+
+/* ---------- 首屏 · 观星台 ---------- */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  padding: 120px 24px 80px;
+}
+.hero-core { text-align: center; max-width: 720px; }
+.hero-kicker {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.5em;
+  color: var(--gold); margin-bottom: 34px;
+}
+.hero-title {
+  font-size: clamp(96px, 17vw, 190px);
+  font-weight: 900; letter-spacing: 0.18em;
+  line-height: 1.1; margin-left: 0.18em; /* 视觉居中补偿字距 */
+  text-shadow: 0 0 80px rgba(201, 164, 92, 0.15);
+}
+.hero-latin {
+  font-family: var(--latin); font-size: 15px; letter-spacing: 0.6em;
+  color: var(--paper-faint); margin: 18px 0 44px;
+}
+.hero-motto {
+  font-size: clamp(17px, 2.2vw, 21px);
+  letter-spacing: 0.14em; color: var(--paper);
+  line-height: 2.4;
+}
+.hero-actions { margin-top: 52px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+
+/* 竖排侧题（书院楹柱） */
+.hero-vertical {
+  position: absolute; right: 5vw; top: 50%; transform: translateY(-50%);
+  display: flex; gap: 22px; align-items: flex-start;
+}
+.v-title {
+  writing-mode: vertical-rl; font-size: 30px; letter-spacing: 0.55em;
+  font-weight: 600; color: var(--paper-dim);
+  border-right: 1px solid var(--hairline); padding-right: 18px;
+}
+.v-sub {
+  writing-mode: vertical-rl; font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.5em; color: var(--paper-faint); padding-top: 6px;
+}
+
+.hero-foot {
+  position: absolute; bottom: 28px; left: 40px; right: 40px;
+  display: flex; justify-content: space-between;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.2em;
+  color: var(--paper-faint);
+}
+.hero-scroll { animation: drift 2.6s ease-in-out infinite; }
+@keyframes drift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+
+/* ---------- 按钮 ---------- */
+.btn {
+  display: inline-block; text-decoration: none;
+  font-size: 14px; letter-spacing: 0.28em; padding: 13px 34px 13px 38px;
+  border-radius: 2px; transition: all 0.35s ease;
+}
+.btn-solid {
+  background: var(--paper); color: var(--ink);
+  border: 1px solid var(--paper); font-weight: 600;
+}
+.btn-solid:hover { background: transparent; color: var(--paper); }
+.btn-line { border: 1px solid var(--hairline); color: var(--paper-dim); }
+.btn-line:hover { border-color: var(--paper-dim); color: var(--paper); }
+
+/* ---------- 节索引 ---------- */
+.sec-index {
+  font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.5em;
+  color: var(--gold); text-align: center;
+  margin-bottom: 60px; padding-top: 130px;
+}
+.sec-lead {
+  text-align: center; font-size: clamp(22px, 3.4vw, 32px);
+  font-weight: 600; letter-spacing: 0.12em; line-height: 2.2;
+  margin-bottom: 90px;
+}
+
+/* ---------- 宣言 ---------- */
+.manifesto { max-width: 880px; margin: 0 auto; padding: 0 28px 40px; }
+.manifesto-line {
+  font-size: clamp(26px, 4.6vw, 44px);
+  font-weight: 900; letter-spacing: 0.1em; line-height: 1.9;
+  text-align: center;
+}
+.manifesto-body { max-width: 620px; margin: 56px auto 0; color: var(--paper-dim); font-size: 16px; }
+.manifesto-body p + p { margin-top: 1.4em; }
+.manifesto-note { font-size: 13.5px; color: var(--paper-faint); border-left: 1px solid var(--hairline); padding-left: 18px; }
+
+/* ---------- 五大航向 · 碑牌 ---------- */
+.directions { max-width: 980px; margin: 0 auto; padding: 0 28px; }
+.dir-list { border-top: 1px solid var(--hairline); }
+.dir {
+  display: grid;
+  grid-template-columns: 60px 120px 110px 1fr auto;
+  grid-template-areas:
+    "no name lens desc arrow"
+    "no name lens path arrow";
+  column-gap: 28px; align-items: center;
+  padding: 34px 22px;
+  border-bottom: 1px solid var(--hairline);
+  text-decoration: none; color: var(--paper);
+  position: relative; overflow: hidden;
+  transition: background 0.45s ease;
+}
+.dir::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+  background: var(--accent); transform: scaleY(0); transform-origin: top;
+  transition: transform 0.45s ease;
+}
+.dir:hover { background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 6%, transparent), transparent 65%); }
+.dir:hover::before { transform: scaleY(1); }
+.dir-no {
+  grid-area: no; font-family: var(--latin); font-size: 26px;
+  color: var(--paper-faint); transition: color 0.35s ease;
+}
+.dir:hover .dir-no { color: var(--accent); }
+.dir-name {
+  grid-area: name; font-size: 34px; font-weight: 900; letter-spacing: 0.3em;
+  transition: color 0.35s ease;
+}
+.dir:hover .dir-name { color: var(--accent); }
+.dir-lens {
+  grid-area: lens; writing-mode: vertical-rl;
+  font-size: 13px; letter-spacing: 0.4em; color: var(--paper-dim);
+  border-left: 1px solid var(--hairline); padding-left: 12px;
+  justify-self: start;
+}
+.dir-desc { grid-area: desc; font-size: 15px; color: var(--paper-dim); line-height: 1.9; }
+.dir-path {
+  grid-area: path; font-family: var(--mono); font-size: 11.5px;
+  letter-spacing: 0.08em; color: var(--paper-faint); margin-top: 8px;
+}
+.dir-arrow {
+  grid-area: arrow; font-size: 20px; color: var(--paper-faint);
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+.dir:hover .dir-arrow { transform: translateX(8px); color: var(--accent); }
+
+/* ---------- 机制 · 轨道 ---------- */
+.orbit { max-width: 760px; margin: 0 auto; padding: 0 28px 40px; }
+.orbit-track { position: relative; padding-left: 42px; }
+.orbit-line {
+  position: absolute; left: 11px; top: 8px; bottom: 8px; width: 1px;
+  background: var(--hairline);
+}
+.orbit-line i {
+  display: block; width: 100%; height: 0;
+  background: linear-gradient(180deg, var(--gold), rgba(201, 164, 92, 0.15));
+  transition: height 0.2s linear;
+}
+.orbit-steps { list-style: none; }
+.step { position: relative; padding: 0 0 72px 22px; }
+.step:last-child { padding-bottom: 20px; }
+.step-star {
+  position: absolute; left: -37px; top: 10px;
+  width: 11px; height: 11px; border-radius: 50%;
+  background: var(--ink); border: 1px solid var(--accent);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.step h3 { font-size: 21px; font-weight: 600; letter-spacing: 0.14em; margin-bottom: 10px; }
+.step p { font-size: 15px; color: var(--paper-dim); max-width: 540px; }
+
+/* ---------- 入院 ---------- */
+.join { max-width: 760px; margin: 0 auto; padding: 0 28px 60px; text-align: center; }
+.join-title {
+  font-size: clamp(28px, 5vw, 46px); font-weight: 900;
+  letter-spacing: 0.12em; line-height: 2;
+}
+.join-body { margin: 40px auto 0; max-width: 520px; color: var(--paper-dim); font-size: 16px; }
+.join-actions { margin-top: 52px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+
+/* ---------- 页脚 ---------- */
+.footer {
+  border-top: 1px solid var(--hairline);
+  padding: 34px 40px;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  font-size: 13px; letter-spacing: 0.18em; color: var(--paper-dim);
+}
+.footer-dim { font-family: var(--mono); font-size: 11px; color: var(--paper-faint); }
+
+/* ---------- 滚动揭示 ---------- */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .hero-scroll { animation: none; }
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 860px) {
+  .topbar { padding: 16px 22px; }
+  .topnav { gap: 20px; }
+  .topnav a { letter-spacing: 0.18em; }
+  .hero-vertical { display: none; }
+  .hero-foot { left: 22px; right: 22px; }
+  .dir {
+    grid-template-columns: 40px 1fr auto;
+    grid-template-areas:
+      "no name arrow"
+      "no lens arrow"
+      "desc desc desc"
+      "path path path";
+    row-gap: 6px; padding: 26px 14px;
+  }
+  .dir-lens { writing-mode: horizontal-tb; border-left: none; padding-left: 0; }
+  .dir-desc { margin-top: 10px; }
+  .footer { padding: 28px 22px; }
+}
