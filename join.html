@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>入院 · 加入我们 — 星宙 AstroVerseDAO</title>
+<meta name="description" content="星宙是一所没有围墙的学院。任何人都可以来学，也可以来教。开源、免费、向所有求知者开放。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="dimmer">
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="0.7" transform="rotate(56 16 16)"/>
+    </svg>
+    <span class="brand-word">星宙<em>AstroVerseDAO</em></span>
+  </a>
+  <nav class="topnav">
+    <a href="index.html#manifesto">宣言</a>
+    <a href="index.html#directions">航向</a>
+    <a href="path.html">机制</a>
+    <a href="join.html" class="nav-cta active">入院</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero wrap">
+    <p class="page-kicker reveal">ADMISSION · 入院</p>
+    <h1 class="page-title reveal">加入我们</h1>
+    <p class="page-lens reveal">没有围墙的学院</p>
+    <p class="page-why reveal">星宙是一所没有围墙的学院。<strong>任何人都可以来学，也可以来教。</strong>一所普通学校的出身，不应该限制一个人成为怎样的人。</p>
+  </section>
+
+  <!-- ============ 为什么加入 ============ -->
+  <section class="wrap" style="padding-bottom:80px">
+    <p class="sec-index">为什么加入</p>
+    <div class="join-grid">
+      <div class="join-cell reveal">
+        <b>FREE</b>
+        <h3>免费，永远如此</h3>
+        <p>所有内容开源、免费。知识不应被围墙困住。</p>
+      </div>
+      <div class="join-cell reveal">
+        <b>MISSING</b>
+        <h3>补上大学缺失的一课</h3>
+        <p>投资、生存、人际、历史经验——这里有你大学没教的东西。</p>
+      </div>
+      <div class="join-cell reveal">
+        <b>LEARN</b>
+        <h3>学习如何学习</h3>
+        <p>在 AI 时代，这是最重要的能力——社会进化的速度超过了任何课表。</p>
+      </div>
+      <div class="join-cell reveal">
+        <b>TOGETHER</b>
+        <h3>找到同伴</h3>
+        <p>一个人自学容易放弃，一群人可以走很远。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 你能贡献什么 ============ -->
+  <section class="wrap" style="padding-bottom:80px">
+    <p class="sec-index">你能贡献什么 · 每个人的背景都是资产</p>
+    <div class="join-grid">
+      <div class="join-cell reveal">
+        <b>学生</b>
+        <h3>分享你的学习现场</h3>
+        <p>学习笔记、踩坑经验、书单——你正在走的路，正是后来者的地图。</p>
+      </div>
+      <div class="join-cell reveal">
+        <b>工程师</b>
+        <h3>贡献课程与项目</h3>
+        <p>科技方向的网安、AI、开源工具——把你的工程经验变成路径。</p>
+      </div>
+      <div class="join-cell reveal">
+        <b>职场人</b>
+        <h3>分享真实世界的规则</h3>
+        <p>投资、职场、人际、法律——课本外的生存知识最稀缺。</p>
+      </div>
+      <div class="join-cell reveal">
+        <b>任何热爱</b>
+        <h3>只要你想教，这里就有课堂</h3>
+        <p>政治、历史、天文、户外……热爱本身就是最好的讲义。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 如何开始 ============ -->
+  <section class="wrap" style="padding-bottom:80px">
+    <p class="sec-index">如何开始</p>
+    <ul class="expedition-list">
+      <li class="reveal"><b>⭐ Star 我们</b><span>给 <a href="https://github.com/AstroVerseDAO/opencosmos" target="_blank" rel="noopener" style="color:var(--green-bright);border-bottom:1px solid var(--line-strong)">opencosmos</a> 点个星，让更多人看到。</span></li>
+      <li class="reveal"><b>提 Issue</b><span>有想法、有问题、有建议，去 <a href="https://github.com/AstroVerseDAO/opencosmos/issues" target="_blank" rel="noopener" style="color:var(--green-bright);border-bottom:1px solid var(--line-strong)">Issues</a> 说出来。</span></li>
+      <li class="reveal"><b>发 Pull Request</b><span>Fork 仓库，补充内容，提交你的第一份贡献。</span></li>
+      <li class="reveal"><b>参与讨论</b><span>在 Discussions 里发起话题，找到同路人。</span></li>
+      <li class="reveal"><b>共建新项目</b><span>认领一个<a href="path.html" style="color:var(--green-bright);border-bottom:1px solid var(--line-strong)">规划中的项目</a>，或发起你自己的想法。</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ 社区准则 ============ -->
+  <section class="wrap" style="padding-bottom:90px">
+    <p class="sec-index">社区准则 · 简单三条</p>
+    <ol class="rule-list">
+      <li class="reveal">尊重每一个人<em>无论出身、学校、学历。</em></li>
+      <li class="reveal">诚实与开放<em>不懂就问，错了就改，源码会说话。</em></li>
+      <li class="reveal">分享即学习<em>教会别人，是检验自己学会的最好方式。</em></li>
+    </ol>
+  </section>
+
+  <!-- ============ 收尾 ============ -->
+  <section class="join wrap" style="padding-top:40px">
+    <h2 class="join-title reveal">世界很大，<br/>值得你完整地理解它。</h2>
+    <p class="join-body reveal">星宙 AstroVerseDAO 的名字来自 astro（星）+ verse（宇宙）。从这里开始你的自学之旅。</p>
+    <div class="join-actions reveal">
+      <a class="btn btn-solid" href="index.html#directions">回到五大航向</a>
+      <a class="btn btn-line" href="https://github.com/AstroVerseDAO/opencosmos" target="_blank" rel="noopener">GitHub 仓库</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>星宙 AstroVerseDAO · 观星书院</span>
+  <span class="footer-dim">开源 · 免费 · 面向每一位求知者 — MMXXVI</span>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

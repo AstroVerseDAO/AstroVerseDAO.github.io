@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>修习机制 — 星宙 AstroVerseDAO</title>
+<meta name="description" content="五个阶段，一条轨道：Piscine 启航周 → 五大航向核心路径 → Conundrums 谜题环 → Expedition 远征项目 → Capstone 毕业课题。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="dimmer">
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="0.7" transform="rotate(56 16 16)"/>
+    </svg>
+    <span class="brand-word">星宙<em>AstroVerseDAO</em></span>
+  </a>
+  <nav class="topnav">
+    <a href="index.html#manifesto">宣言</a>
+    <a href="index.html#directions">航向</a>
+    <a href="path.html" class="active">机制</a>
+    <a href="join.html" class="nav-cta">入院</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero wrap">
+    <p class="page-kicker reveal">THE ORBIT · 修习机制</p>
+    <h1 class="page-title reveal">五个阶段</h1>
+    <p class="page-lens reveal">一条轨道</p>
+    <p class="page-why reveal">课程体系借鉴 School 42 与 Astra Nova 的机制，按五个阶段展开。当前为初版框架，处于持续演进状态——<strong>框架是地图，不是轨道；路线可以改，航向不能丢。</strong></p>
+  </section>
+
+  <!-- ============ 轨道 ============ -->
+  <section class="orbit wrap" style="padding-top:20px">
+    <div class="orbit-track">
+      <div class="orbit-line" aria-hidden="true"><i id="orbit-fill"></i></div>
+      <ol class="orbit-steps">
+        <li class="step reveal">
+          <span class="step-star" style="--accent:#e6ecd8"></span>
+          <h3>Ⅰ · Piscine · 启航周</h3>
+          <p>30 天零门槛高强度挑战。先把自己扔进水里，学会「学习如何学习」。名字来自 School 42 的入学选拔——泳池里没有人教你游泳，你只能在扑腾中学会。</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-star" style="--accent:#95d5b2"></span>
+          <h3>Ⅱ · 五大航向 · 核心路径</h3>
+          <p>每个方向一条从零开始的完整路径：理论 → 实践 → 必做项目。从<a href="politics.html" style="color:#e3d9b8">政治</a>、<a href="economy.html" style="color:#cfa85c">经济</a>、<a href="tech.html" style="color:#d96c4f">科技</a>、<a href="history.html" style="color:#7fb069">历史</a>、<a href="cosmos.html" style="color:#7a9bb8">宇宙</a>中，选一个最有热情的航向先走完一轮，再横向扩展。</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-star" style="--accent:#74a892"></span>
+          <h3>Ⅲ · Conundrums · 谜题环</h3>
+          <p>每阶段一个跨学科开放题：伦理 × AI × 经济 × 生存。没有标准答案，只有更好的论证。</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-star" style="--accent:#52b788"></span>
+          <h3>Ⅳ · Expedition · 远征项目</h3>
+          <p>开源项目 / 虚拟公司 / 投资实盘 / 野外生存——把知识做成真实世界的作品。</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-star" style="--accent:#a9c25d"></span>
+          <h3>Ⅴ · Capstone · 毕业课题</h3>
+          <p>自主选题、动手完成、公开答辩（peer review）。它不授予文凭——它授予完整的自学能力，这是 AI 时代最硬的通货。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 谜题环 ============ -->
+  <section class="wrap" style="padding:40px 0 90px">
+    <p class="sec-index">谜题环 · 示例</p>
+    <div class="conundrum-grid">
+      <div class="conundrum reveal">
+        <b>伦理 × AI</b>
+        <p>自动驾驶在不可避免的事故中应该如何决策？</p>
+      </div>
+      <div class="conundrum reveal">
+        <b>经济 × 生存</b>
+        <p>如果货币体系崩溃，你的技能组合值多少钱？</p>
+      </div>
+      <div class="conundrum reveal">
+        <b>科技 × 政治</b>
+        <p>深度伪造时代，我们如何保卫真相与公共讨论？</p>
+      </div>
+      <div class="conundrum reveal">
+        <b>宇宙 × 历史</b>
+        <p>如果人类殖民火星，第一部「火星宪法」该怎么写？</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 远征项目 ============ -->
+  <section class="wrap" style="padding-bottom:90px">
+    <p class="sec-index">远征项目 · 把知识做成作品</p>
+    <ul class="expedition-list">
+      <li class="reveal"><b>开源项目</b><span>参与或发起一个 GitHub 开源项目，让世界看到你的代码。</span></li>
+      <li class="reveal"><b>虚拟公司</b><span>组建团队、发行虚拟货币、模拟经营——在沙盘里理解商业。</span></li>
+      <li class="reveal"><b>投资实盘</b><span>小资金真实账户，长期跟踪与复盘，让复利做你的老师。</span></li>
+      <li class="reveal"><b>野外生存</b><span>真实户外训练——定向、庇护所、水源、火源、急救。</span></li>
+      <li class="reveal"><b>教学输出</b><span>把你的笔记整理成公开课程，教会下一个人——教会别人，是检验自己学会的最好方式。</span></li>
+    </ul>
+
+    <div class="tip-block reveal">
+      <b>怎么开始</b>
+      不要同时开始五个航向。先从 Piscine 启航，选一个最有热情的航向走完一轮「理论 → 项目」，再横向扩展。
+    </div>
+    <div class="tip-block reveal">
+      <b>学习建议</b>
+      <ol>
+        <li><strong>每学一个理论，配一个实践。</strong> 学了复利就去开账户验证，学了网络就去打靶场。</li>
+        <li><strong>用输出倒逼输入。</strong> 笔记、项目、复盘都发到 GitHub——你会学得更快。</li>
+        <li><strong>找到同伴。</strong> 一个人游不到对岸，我们一起。</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 规划中的项目 ============ -->
+  <section class="wrap" style="padding-bottom:110px">
+    <p class="sec-index">规划中的项目</p>
+    <p class="reveal" style="color:var(--dim);font-size:15px;max-width:640px">星宙的一切知识，最终都要落地为真实的项目。项目是我们的「作业」，也是我们的「作品」。以下项目虚位以待，欢迎认领。</p>
+    <table class="plan-table reveal">
+      <thead><tr><th>项目</th><th>航向</th><th>状态</th></tr></thead>
+      <tbody>
+        <tr><td>投资与复利入门路线</td><td>经济</td><td><span class="tag">规划中</span></td></tr>
+        <tr><td>野外生存实用手册</td><td>实用技能</td><td><span class="tag">规划中</span></td></tr>
+        <tr><td>政治制度阅读地图</td><td>政治</td><td><span class="tag">规划中</span></td></tr>
+        <tr><td>历史经验迁移指南</td><td>历史</td><td><span class="tag">规划中</span></td></tr>
+        <tr><td>宇宙科学世界观导读</td><td>宇宙</td><td><span class="tag">规划中</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>星宙 AstroVerseDAO · 观星书院</span>
+  <span class="footer-dim">开源 · 免费 · 面向每一位求知者 — MMXXVI</span>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
