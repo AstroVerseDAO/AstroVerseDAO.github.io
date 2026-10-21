@@ -25,7 +25,7 @@
 
 GitHub Pages：`main` 分支根目录直接发布。
 
-线上地址：<https://astroversedao.github.io/opencosmos/>
+线上地址：<https://astroversedao.github.io/>
 
 ## 参与
 
