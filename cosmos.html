@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>宇宙 · 星海与未知 — 星宙 AstroVerseDAO</title>
+<meta name="description" content="宇宙航向：科学世界观，我们从哪里来，宇宙如何运行。天文学 → 物理学 → 科学方法论 → 演化论。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>body { --accent: var(--water); }</style>
+</head>
+<body class="dimmer">
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="0.7" transform="rotate(56 16 16)"/>
+    </svg>
+    <span class="brand-word">星宙<em>AstroVerseDAO</em></span>
+  </a>
+  <nav class="topnav">
+    <a href="index.html#manifesto">宣言</a>
+    <a href="index.html#directions" class="active">航向</a>
+    <a href="path.html">机制</a>
+    <a href="join.html" class="nav-cta">入院</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero wrap">
+    <p class="page-kicker reveal">第伍航向 · WATER · 水</p>
+    <h1 class="page-title reveal">宇宙</h1>
+    <p class="page-lens reveal">水 · 星海与未知</p>
+    <p class="page-why reveal"><strong>为什么学：</strong>宇宙尺度让我们保持谦卑，科学方法让我们保持清醒。这是抵御迷信、偏见与恐慌最好的疫苗。从脚下的地球到可观测宇宙，从牛顿力学到相对论与量子力学，它回答的问题只有一个——我们是谁，我们从哪里来，我们与这个宇宙的关系是什么。</p>
+    <div class="page-pathline reveal">
+      <b>C1</b><span>天文学与宇宙学 →</span><b>C2</b><span>物理学基础 →</span><b>C3</b><span>科学方法论 →</span><b>C4</b><span>演化论 →</span><span>必做项目</span>
+    </div>
+  </section>
+
+  <div class="stages wrap">
+
+    <section class="stage reveal">
+      <div class="stage-marker"><span class="stage-code">C1<small>COSMOS</small></span></div>
+      <div class="stage-body">
+        <h2>天文学与宇宙学</h2>
+        <p class="stage-goal">目标：建立从地球到宇宙的尺度感与时空观。</p>
+        <h4>学习资源 · 按顺序</h4>
+        <ul class="res-list">
+          <li>卡尔·萨根《宇宙》（及同名纪录片） <em>最好的起点，没有之一</em></li>
+          <li>尼尔·德格拉斯·泰森《给忙碌者的天体物理学》 <em>一百页建立现代宇宙观</em></li>
+          <li>纪录片《宇宙时空之旅》 <em>Cosmos: A Spacetime Odyssey</em></li>
+          <li>霍金《时间简史》 <em>从大爆炸到黑洞的通俗经典</em></li>
+        </ul>
+        <div class="stage-output"><b>产出</b>能画出「地球 → 太阳系 → 银河系 → 本星系群 → 可观测宇宙」的尺度阶梯，并说出每一步的距离量级。</div>
+      </div>
+    </section>
+
+    <section class="stage reveal">
+      <div class="stage-marker"><span class="stage-code">C2<small>PHYSICS</small></span></div>
+      <div class="stage-body">
+        <h2>物理学基础</h2>
+        <p class="stage-goal">目标：理解现代物理学的两大支柱——相对论与量子力学。</p>
+        <h4>学习资源</h4>
+        <ul class="res-list">
+          <li>费曼《费曼物理学讲义》第一卷 <em>物理直觉的巅峰教材</em></li>
+          <li>爱因斯坦《物理学的进化》 <em>相对论的思想史</em></li>
+          <li>曹天元《上帝掷骰子吗？》 <em>量子力学的故事化入门</em></li>
+          <li>狭义相对论 <em>光速不变、时间膨胀、质能方程 E=mc²</em></li>
+          <li>广义相对论 <em>时空弯曲、引力与黑洞</em></li>
+        </ul>
+        <div class="stage-output"><b>产出</b>能用通俗语言向朋友解释：时间膨胀、不确定性原理、量子纠缠（任选其二）。</div>
+      </div>
+    </section>
+
+    <section class="stage reveal">
+      <div class="stage-marker"><span class="stage-code">C3<small>METHOD</small></span></div>
+      <div class="stage-body">
+        <h2>科学方法论</h2>
+        <p class="stage-goal">目标：掌握「如何判断一个说法是否可信」——宇宙航向最实用的产出。</p>
+        <h4>学习资源</h4>
+        <ul class="res-list">
+          <li>波普尔《猜想与反驳》 <em>证伪主义：科学的标准不是可证实，而是可证伪</em></li>
+          <li>卡尔·萨根《魔鬼出没的世界》 <em>识别伪科学与批判性思维</em></li>
+          <li>贝叶斯思维 <em>随机对照实验、相关性 ≠ 因果性</em></li>
+          <li>统计陷阱与认知偏差 <em>与经济航向的行为决策联动</em></li>
+        </ul>
+        <div class="stage-output"><b>产出</b>拆解一个流传甚广的「伪科学/谣言」案例，说明它为什么不可信，以及如何设计一个验证方案。</div>
+      </div>
+    </section>
+
+    <section class="stage reveal">
+      <div class="stage-marker"><span class="stage-code">C4<small>EVOLUTION</small></span></div>
+      <div class="stage-body">
+        <h2>演化论</h2>
+        <p class="stage-goal">目标：理解生命如何从简单到复杂——达尔文之后的世界观。</p>
+        <h4>学习资源</h4>
+        <ul class="res-list">
+          <li>理查德·道金斯《自私的基因》 <em>基因视角下的演化</em></li>
+          <li>卡尔·齐默《演化的故事》 <em>从生命起源到人类</em></li>
+          <li>达尔文《物种起源》（选读） <em>经典原文</em></li>
+          <li>演化与 AI 的类比 <em>变异、选择、适应——理解进化的通用框架</em></li>
+        </ul>
+        <div class="stage-output"><b>产出</b>用「变异 → 选择 → 遗传」的框架，解释一个生物现象（或类比解释公司演化、语言演化等非生物系统）。</div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="wrap">
+    <section class="capstone-panel reveal">
+      <p class="sec-index">必做项目</p>
+      <h2>可验证的小型科学实验 / 天文观测记录（二选一）</h2>
+      <ol>
+        <li><strong>小型科学实验</strong>：设计并完成一个可重复、可验证的实验（测量自由落体加速度、用影子测量地球周长、对比不同条件下植物生长），完整记录假设、方法、数据、结论；</li>
+        <li><strong>天文观测记录</strong>：连续一个月观测月球（或木星、行星运动），记录月相与位置变化，验证一个你学到的天文规律。</li>
+      </ol>
+      <p style="margin-top:18px">产出物发到 GitHub 公开——<strong>一个可以被人复现的实验，才配叫科学。</strong></p>
+    </section>
+
+    <section class="cross reveal">
+      <p class="sec-index">航向联动</p>
+      <div class="cross-list">
+        <a href="tech.html" style="--c:#d96c4f"><b>宇宙 × 科技</b>航天工程、芯片物理、AI 的物理基础</a>
+        <a href="history.html" style="--c:#7fb069"><b>宇宙 × 历史</b>从宇宙尺度回看人类史</a>
+        <a href="politics.html" style="--c:#e3d9b8"><b>宇宙 × 政治</b>太空治理、行星资源分配</a>
+      </div>
+    </section>
+
+    <p class="manifesto-note reveal" style="margin-bottom:70px">宇宙航向的终点不是成为天文学家，而是<strong>获得一种清醒的尺度感</strong>——知道自己渺小，但知道自己珍贵；对未知保持敬畏，对已知保持怀疑。</p>
+  </div>
+
+  <nav class="cycle" aria-label="航向循环导航">
+    <a href="history.html" style="--c:#7fb069">
+      <span class="cyc-label">← 上一航向 · 木</span>
+      <div class="cyc-name">历史 · 记忆与智慧</div>
+    </a>
+    <a href="politics.html" style="--c:#e3d9b8">
+      <span class="cyc-label">下一航向 · 金 →</span>
+      <div class="cyc-name">政治 · 权力与秩序</div>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="footer">
+  <span>星宙 AstroVerseDAO · 观星书院</span>
+  <span class="footer-dim">开源 · 免费 · 面向每一位求知者 — MMXXVI</span>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

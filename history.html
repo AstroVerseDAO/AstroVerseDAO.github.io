@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>历史 · 记忆与智慧 — 星宙 AstroVerseDAO</title>
+<meta name="description" content="历史航向：从时间的纵深理解当下。世界通史 → 中国历史 → 思想史 → 技术史。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<style>body { --accent: var(--wood); }</style>
+</head>
+<body class="dimmer">
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="0.7" transform="rotate(56 16 16)"/>
+    </svg>
+    <span class="brand-word">星宙<em>AstroVerseDAO</em></span>
+  </a>
+  <nav class="topnav">
+    <a href="index.html#manifesto">宣言</a>
+    <a href="index.html#directions" class="active">航向</a>
+    <a href="path.html">机制</a>
+    <a href="join.html" class="nav-cta">入院</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-hero wrap">
+    <p class="page-kicker reveal">第肆航向 · WOOD · 木</p>
+    <h1 class="page-title reveal">历史</h1>
+    <p class="page-lens reveal">木 · 记忆与智慧</p>
+    <p class="page-why reveal"><strong>为什么学：</strong>人类在几千年的时间里，用血泪总结了无数经验。历史是我们能买到的最便宜的学费。历史航向不是「背年代与事件」，而是从时间的纵深理解当下：文明如何兴起与衰亡，制度如何演化，观念如何改变世界。读懂历史，你就拥有了预测未来的最可靠方法——模式识别。</p>
+    <div class="page-pathline reveal">
+      <b>H1</b><span>世界通史 →</span><b>H2</b><span>中国历史 →</span><b>H3</b><span>思想史 →</span><b>H4</b><span>技术史 →</span><span>必做项目</span>
+    </div>
+  </section>
+
+  <div class="stages wrap">
+
+    <section class="stage reveal">
+      <div class="stage-marker"><span class="stage-code">H1<small>WORLD</small></span></div>
+      <div class="stage-body">
+        <h2>世界通史</h2>
+        <p class="stage-goal">目标：建立整个人类文明的时间轴与空间地图。</p>
+        <h4>学习资源 · 按顺序</h4>
+        <ul class="res-list">
+          <li>尤瓦尔·赫拉利《人类简史》 <em>认知革命、农业革命、科学革命的三条主线</em></li>
+          <li>贾雷德·戴蒙德《枪炮、病菌与钢铁》 <em>地理如何决定历史</em></li>
+          <li>斯塔夫里阿诺斯《全球通史》 <em>从文明摇篮到现代世界的宏观叙事</em></li>
+          <li>纪录片《文明》（Civilisation） <em>视觉化的文明演进</em></li>
+        </ul>
+        <div class="stage-output"><b>产出</b>手绘一张「人类文明时间轴」，标出 20 个你认为最重要的转折点，并各写一句「为什么是它」。</div>
+      </div>
+    </section>
+
+    <section class="stage reveal">
+      <div class="stage-marker"><span class="stage-code">H2<small>CHINA</small></span></div>
+      <div class="stage-body">
+        <h2>中国历史</h2>
+        <p class="stage-goal">目标：理解我们脚下的土地与它的运行逻辑——这对生活在中国的每个人都是必修课。</p>
+        <h4>学习资源</h4>
+        <ul class="res-list">
+          <li>《中国通史》（纪录片 + 配套读本） <em>完整的朝代框架</em></li>
+          <li>钱穆《国史大纲》/ 吕思勉《中国通史》 <em>传统史学视角的经典</em></li>
+          <li>黄仁宇《万历十五年》 <em>一个年份看透明代制度的运转与失灵</em></li>
+          <li>费正清《中国：传统与变迁》 <em>外部视角下的长时段观察</em></li>
+        </ul>
+        <div class="stage-output"><b>产出</b>选择一个朝代（或一段时期），写清它的「制度设计 → 繁荣 → 危机 → 衰亡」链条。</div>
+      </div>
+    </section>
+
+    <section class="stage reveal">
+      <div class="stage-marker"><span class="stage-code">H3<small>IDEAS</small></span></div>
+      <div class="stage-body">
+        <h2>思想史</h2>
+        <p class="stage-goal">目标：理解塑造现代世界的观念从哪里来。</p>
+        <h4>学习资源</h4>
+        <ul class="res-list">
+          <li>罗素《西方哲学史》 <em>哲学思想的趣味通览</em></li>
+          <li>茨威格《人类群星闪耀时》 <em>观念改变历史的瞬间</em></li>
+          <li>启蒙运动 <em>从洛克到康德，现代性的思想地基</em></li>
+          <li>中国思想史 <em>从先秦诸子到近现代思潮（葛兆光《中国思想史》选读）</em></li>
+        </ul>
+        <div class="stage-output"><b>产出</b>选一个改变世界的观念（「主权在民」「进化论」「市场」），追溯它的起源、传播与后果。</div>
+      </div>
+    </section>
+
+    <section class="stage reveal">
+      <div class="stage-marker"><span class="stage-code">H4<small>TECHNOLOGY</small></span></div>
+      <div class="stage-body">
+        <h2>技术史</h2>
+        <p class="stage-goal">目标：理解创新如何发生，如何被接受或被抵制——这对 AI 时代尤其重要。</p>
+        <h4>学习资源</h4>
+        <ul class="res-list">
+          <li>戴维·兰德斯《国富国穷》 <em>技术与国家命运</em></li>
+          <li>单点深挖 <em>蒸汽机、电报、互联网、芯片——每一项都重塑了世界</em></li>
+          <li>技术与社会 <em>印刷术与宗教改革、铁路与时间标准、AI 与劳动力结构</em></li>
+          <li>布莱恩·阿瑟《技术的本质》 <em>技术如何进化</em></li>
+        </ul>
+        <div class="stage-output"><b>产出</b>以 AI 为对象，写一篇「技术史视角下的 AI 时代」短文（800 字）。</div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="wrap">
+    <section class="capstone-panel reveal">
+      <p class="sec-index">必做项目</p>
+      <h2>历史经验迁移报告</h2>
+      <ol>
+        <li>选择一段历史案例（王朝兴衰、金融危机、技术变革、瘟疫应对……）；</li>
+        <li>提炼其中的「模式」：因果链、制度设计、人性规律；</li>
+        <li>把模式映射到当代问题：AI 冲击就业、地缘冲突、投资周期、公司管理……</li>
+        <li>写一篇 2000 字报告，回答：这段历史教给今天什么？哪些可以迁移，哪些不可迁移？</li>
+        <li>发到 GitHub 公开。</li>
+      </ol>
+    </section>
+
+    <section class="cross reveal">
+      <p class="sec-index">航向联动</p>
+      <div class="cross-list">
+        <a href="economy.html" style="--c:#cfa85c"><b>历史 × 经济</b>金融史与危机周期</a>
+        <a href="politics.html" style="--c:#e3d9b8"><b>历史 × 政治</b>制度是历史的产物</a>
+        <a href="tech.html" style="--c:#d96c4f"><b>历史 × 科技</b>技术变革的社会后果</a>
+        <a href="cosmos.html" style="--c:#7a9bb8"><b>历史 × 宇宙</b>从宇宙尺度回看人类史的谦卑</a>
+      </div>
+    </section>
+
+    <p class="manifesto-note reveal" style="margin-bottom:70px">历史航向的终点不是「记住过去」，而是<strong>用过去校准未来</strong>——站在前人的肩膀上，不重复他们的错误。</p>
+  </div>
+
+  <nav class="cycle" aria-label="航向循环导航">
+    <a href="tech.html" style="--c:#d96c4f">
+      <span class="cyc-label">← 上一航向 · 火</span>
+      <div class="cyc-name">科技 · 工具与创造</div>
+    </a>
+    <a href="cosmos.html" style="--c:#7a9bb8">
+      <span class="cyc-label">下一航向 · 水 →</span>
+      <div class="cyc-name">宇宙 · 星海与未知</div>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="footer">
+  <span>星宙 AstroVerseDAO · 观星书院</span>
+  <span class="footer-dim">开源 · 免费 · 面向每一位求知者 — MMXXVI</span>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
