@@ -668,3 +668,142 @@ main { position: relative; z-index: 1; }
   .capstone-panel { padding: 30px 24px; }
   .footer { padding: 26px 20px; }
 }
+
+/* ============================================================
+   科技航向 · 阶段化课程目录（TECH 000 → 107）
+   ============================================================ */
+
+/* ---------- 阶段导航栏 ---------- */
+.stage-rail {
+  position: sticky; top: 62px; z-index: 30;
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  background: rgba(6, 12, 8, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--line);
+  padding: 12px 16px;
+  margin-bottom: 40px;
+}
+.rail-chip {
+  display: flex; align-items: baseline; gap: 7px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+  color: var(--dim);
+  border: 1px solid var(--line);
+  padding: 7px 13px; border-radius: 999px;
+  transition: all 0.25s;
+}
+.rail-chip b { font-size: 12px; color: var(--fire); font-weight: 500; }
+.rail-chip span { letter-spacing: 0.14em; }
+.rail-chip:hover { color: var(--green-bright); border-color: var(--line-strong); transform: translateY(-1px); }
+.rail-chip.on { background: var(--fire); border-color: var(--fire); color: var(--ink); }
+.rail-chip.on b { color: var(--ink); }
+.stage-rail .atlas-search { margin-left: auto; }
+
+/* ---------- 阶段区块 ---------- */
+.tstage { margin-bottom: 64px; scroll-margin-top: 130px; }
+.tstage-head {
+  display: grid; grid-template-columns: 150px 1fr; gap: 30px;
+  padding-bottom: 26px; margin-bottom: 10px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.tstage-num {
+  font-family: var(--mono); font-size: 26px; line-height: 1.35;
+  color: var(--fire); letter-spacing: 0.12em;
+  border-right: 1px solid var(--line);
+}
+.tstage-info h2 { font-size: 30px; font-weight: 900; color: #eef5e8; letter-spacing: 0.06em; }
+.tstage-info h2 em {
+  font-style: normal; font-family: var(--mono); font-weight: 400;
+  font-size: 11px; letter-spacing: 0.3em; color: var(--faint);
+  margin-left: 14px; vertical-align: middle;
+}
+.tstage-desc { margin-top: 12px; font-size: 15px; color: var(--dim); line-height: 1.85; max-width: 720px; }
+.tstage-goal {
+  margin-top: 16px; padding: 14px 18px;
+  background: var(--panel);
+  border: 1px solid var(--line); border-left: 2px solid var(--fire);
+  font-size: 14.5px; color: var(--dim); max-width: 720px;
+}
+.tstage-goal b {
+  display: block; font-family: var(--mono); font-weight: 500;
+  font-size: 10px; letter-spacing: 0.3em; color: var(--fire); margin-bottom: 5px;
+}
+
+/* ---------- 主题手风琴 ---------- */
+.topics { border-top: 1px solid var(--line); }
+.topic { border-bottom: 1px solid var(--line); }
+.topic-head {
+  display: grid; grid-template-columns: 26px minmax(170px, 240px) 1fr auto;
+  gap: 16px; align-items: baseline;
+  width: 100%; padding: 17px 6px;
+  background: none; border: none; cursor: pointer;
+  text-align: left; color: var(--text);
+  transition: background 0.25s;
+}
+.topic-head:hover { background: rgba(143, 191, 127, 0.05); }
+.topic-arrow {
+  font-family: var(--mono); font-size: 12px; color: var(--fire);
+  transition: transform 0.3s var(--ease);
+}
+.topic.open .topic-arrow { transform: rotate(90deg); }
+.topic-name { font-size: 17px; font-weight: 600; color: #eef5e8; letter-spacing: 0.04em; }
+.topic-why { font-size: 13.5px; color: var(--faint); line-height: 1.6; }
+.topic-n {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em;
+  color: var(--dim); border: 1px solid var(--line);
+  padding: 3px 11px; border-radius: 999px; white-space: nowrap;
+}
+.topic.open .topic-n { color: var(--fire); border-color: color-mix(in srgb, var(--fire) 45%, transparent); }
+
+.topic-body {
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s var(--ease);
+}
+.topic-body > .opts { overflow: hidden; }
+.topic.open .topic-body { grid-template-rows: 1fr; }
+
+/* ---------- 可选课程卡片 ---------- */
+.opts {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 12px;
+  padding: 6px 6px 24px 32px;
+}
+.opt {
+  border: 1px solid var(--line); background: var(--panel);
+  padding: 20px 22px;
+  display: flex; flex-direction: column;
+  transition: border-color 0.3s, transform 0.3s var(--ease);
+}
+.opt:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+.opt-school {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.22em; color: var(--fire);
+}
+.opt h4 { font-size: 16.5px; color: #eef5e8; margin: 8px 0 4px; font-weight: 600; line-height: 1.5; }
+.opt h4 em { font-style: normal; display: block; font-size: 13px; color: var(--dim); font-weight: 400; margin-top: 2px; }
+.opt-note { font-size: 13.5px; color: var(--dim); line-height: 1.75; flex: 1; }
+.opt-foot { margin-top: 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.opt-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.opt-tags span {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em;
+  color: var(--dim); border: 1px solid var(--line);
+  padding: 2px 9px; border-radius: 999px;
+}
+.opt a {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;
+  color: var(--green-bright); white-space: nowrap;
+  border-bottom: 1px solid var(--line-strong);
+  transition: color 0.25s, border-color 0.25s;
+}
+.opt a:hover { color: var(--fire); border-color: var(--fire); }
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 860px) {
+  .tstage-head { grid-template-columns: 1fr; gap: 14px; }
+  .tstage-num { border-right: none; border-bottom: 1px solid var(--line); padding-bottom: 10px; font-size: 20px; }
+  .tstage-num br { display: none; }
+  .topic-head { grid-template-columns: 22px 1fr auto; }
+  .topic-why { display: none; }
+  .opts { padding-left: 6px; grid-template-columns: 1fr; }
+  .stage-rail .atlas-search { margin-left: 0; width: 100%; }
+}
