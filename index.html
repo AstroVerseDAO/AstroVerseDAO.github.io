@@ -1,1 +1,181 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>星宙 AstroVerseDAO · 观星书院</title>
+<meta name="description" content="面向 AI 时代的开源通识学院 —— 政治 · 经济 · 科技 · 历史 · 宇宙，五大航向的完整自学路径。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- 星野画布（视差 + 流星） -->
+<canvas id="sky" aria-hidden="true"></canvas>
+<!-- 纸纹颗粒 -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- 顶栏 -->
+<header class="topbar">
+  <a class="brand" href="#top">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="0.7" transform="rotate(56 16 16)"/>
+    </svg>
+    <span class="brand-word">星宙<em>AstroVerseDAO</em></span>
+  </a>
+  <nav class="topnav">
+    <a href="#manifesto">宣言</a>
+    <a href="#directions">航向</a>
+    <a href="#orbit">机制</a>
+    <a href="#join" class="nav-cta">入院</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ 首屏 · 观星台 ============ -->
+  <section class="hero">
+    <div class="hero-vertical" aria-hidden="true">
+      <span class="v-title">觀星書院</span>
+      <span class="v-sub">開源通識學院</span>
+    </div>
+
+    <div class="hero-core">
+      <p class="hero-kicker">OPEN COSMOS · 开源宇宙</p>
+      <h1 class="hero-title">星宙</h1>
+      <p class="hero-latin">A S T R O V E R S E D A O</p>
+      <p class="hero-motto">我们不授予学位。<br/>我们提供一条完整的自学路径。</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#directions">启程 · 五大航向</a>
+        <a class="btn btn-line" href="#manifesto">读院训</a>
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <span class="hero-coord">RA 05h 35m · Dec −05° 23′</span>
+      <span class="hero-scroll">向下观测 ↓</span>
+    </div>
+  </section>
+
+  <!-- ============ 宣言 ============ -->
+  <section id="manifesto" class="manifesto">
+    <p class="sec-index">壹 · 宣言</p>
+    <h2 class="manifesto-line reveal">读完一门课程，</h2>
+    <h2 class="manifesto-line reveal">并不等于准备好进入这个世界。</h2>
+    <div class="manifesto-body reveal">
+      <p>投资与复利、如何与人打交道、历史中的经验、身体与生存——这些真正决定人生走向的东西，在大学里反而最缺失。星宙要补上的，正是这一课。</p>
+      <p class="manifesto-note">学习机制借鉴 School 42（无教师、项目驱动、同伴互评）与 Astra Nova（跨学科、面向真实世界问题）两所先锋学校。</p>
+    </div>
+  </section>
+
+  <!-- ============ 五大航向 ============ -->
+  <section id="directions" class="directions">
+    <p class="sec-index">贰 · 五大航向</p>
+    <p class="sec-lead reveal">不是五门互不相干的课，<br/>而是观察同一个世界的五片星空。</p>
+
+    <div class="dir-list">
+      <a class="dir reveal" style="--accent:#a9c25d" href="#">
+        <span class="dir-no">Ⅰ</span>
+        <span class="dir-name">政治</span>
+        <span class="dir-lens">权力与秩序</span>
+        <span class="dir-desc">制度、权力与秩序如何塑造社会。看懂规则，才能参与游戏，而不只是被规则塑造。</span>
+        <span class="dir-path">政治学导论 → 制度与博弈 → 国际关系 → 现代治理</span>
+        <span class="dir-arrow">→</span>
+      </a>
+      <a class="dir reveal" style="--accent:#52b788" href="#">
+        <span class="dir-no">Ⅱ</span>
+        <span class="dir-name">经济</span>
+        <span class="dir-lens">金钱与时间</span>
+        <span class="dir-desc">学习投资与复利，理解市场与资源配置，让时间成为你的盟友。</span>
+        <span class="dir-path">经济学原理 → 会计与财务 → 投资与复利 → 行为与决策</span>
+        <span class="dir-arrow">→</span>
+      </a>
+      <a class="dir reveal" style="--accent:#95d5b2" href="#">
+        <span class="dir-no">Ⅲ</span>
+        <span class="dir-name">科技</span>
+        <span class="dir-lens">工具与创造</span>
+        <span class="dir-desc">编程、AI、网络安全与硬件。掌握工具，更要拥有创造工具的能力。</span>
+        <span class="dir-path">数学 → 编程 → EE 与体系结构 → 计算机核心 → AI 与安全</span>
+        <span class="dir-arrow">→</span>
+      </a>
+      <a class="dir reveal" style="--accent:#c9a45c" href="#">
+        <span class="dir-no">Ⅳ</span>
+        <span class="dir-name">历史</span>
+        <span class="dir-lens">记忆与智慧</span>
+        <span class="dir-desc">前人用血泪总结的经验，是我们最便宜的学费。读史，是为了不重复犯错。</span>
+        <span class="dir-path">世界通史 → 中国历史 → 思想史 → 技术史</span>
+        <span class="dir-arrow">→</span>
+      </a>
+      <a class="dir reveal" style="--accent:#74a892" href="#">
+        <span class="dir-no">Ⅴ</span>
+        <span class="dir-name">宇宙</span>
+        <span class="dir-lens">星海与未知</span>
+        <span class="dir-desc">科学世界观：我们从哪里来，宇宙如何运行。保持谦卑，保持好奇。</span>
+        <span class="dir-path">天文学 → 物理学 → 科学方法论 → 演化论</span>
+        <span class="dir-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ 机制 · 轨道 ============ -->
+  <section id="orbit" class="orbit">
+    <p class="sec-index">叁 · 修习机制</p>
+    <p class="sec-lead reveal">五个阶段，一条轨道。</p>
+
+    <div class="orbit-track">
+      <div class="orbit-line" aria-hidden="true"><i id="orbit-fill"></i></div>
+      <ol class="orbit-steps">
+        <li class="step reveal">
+          <span class="step-star" style="--accent:#e6ecd8"></span>
+          <h3>Piscine · 启航周</h3>
+          <p>30 天零门槛高强度挑战。先把自己扔进水里，学会「学习如何学习」。</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-star" style="--accent:#95d5b2"></span>
+          <h3>五大航向 · 核心路径</h3>
+          <p>每方向一条从零开始的完整路径：理论 → 实践 → 必做项目。</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-star" style="--accent:#74a892"></span>
+          <h3>Conundrums · 谜题环</h3>
+          <p>每阶段一个跨学科开放题：伦理 × AI × 经济 × 生存。没有标准答案，只有更好的论证。</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-star" style="--accent:#52b788"></span>
+          <h3>Expedition · 远征项目</h3>
+          <p>开源项目 / 虚拟公司 / 投资实盘 / 野外生存——把知识做成真实世界的作品。</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-star" style="--accent:#a9c25d"></span>
+          <h3>Capstone · 毕业课题</h3>
+          <p>自主选题，公开答辩。它授予的不是文凭，而是完整的自学能力。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 入院 ============ -->
+  <section id="join" class="join">
+    <p class="sec-index">肆 · 入院</p>
+    <h2 class="join-title reveal">任何人都可以来学，<br/>也可以来教。</h2>
+    <p class="join-body reveal">开源、免费、向所有求知者开放。一所普通学校的出身，不应该限制一个人成为怎样的人。</p>
+    <div class="join-actions reveal">
+      <a class="btn btn-solid" href="https://github.com/AstroVerseDAO" target="_blank" rel="noopener">GitHub 上找到我们</a>
+      <a class="btn btn-line" href="https://github.com/AstroVerseDAO/AstroVerseDAO.github.io/issues" target="_blank" rel="noopener">提一个想法</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>星宙 AstroVerseDAO · 观星书院</span>
+  <span class="footer-dim">开源 · 免费 · 面向每一位求知者 — MMXXVI</span>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
