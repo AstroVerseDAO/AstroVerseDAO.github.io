@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>五大航向 — 星宙 AstroVerseDAO</title>
+<meta name="description" content="政治 · 经济 · 科技 · 历史 · 宇宙——不是五门互不相干的课，而是观察同一个世界的五片星空。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="dimmer">
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="0.7" transform="rotate(56 16 16)"/>
+    </svg>
+    <span class="brand-word">星宙<em>AstroVerseDAO</em></span>
+  </a>
+  <nav class="topnav">
+    <a href="manifesto.html">宣言</a>
+    <a href="directions.html" class="active">航向</a>
+    <a href="path.html">机制</a>
+    <a href="join.html" class="nav-cta">入院</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ 五大航向 ============ -->
+  <section class="directions wrap" style="padding-top:170px">
+    <p class="sec-index">叁 · 五大航向</p>
+    <p class="sec-lead reveal">不是五门互不相干的课，<br/>而是观察同一个世界的五片星空。</p>
+
+    <!-- 星座图：悬停点亮星轨，点击进入航向 -->
+    <div class="constellation reveal" aria-label="五大航向星座图">
+      <svg viewBox="0 0 640 500" role="navigation">
+        <!-- 内五角星轨 -->
+        <line class="edge" style="opacity:.45" data-d="metal fire"  x1="320" y1="65"  x2="428.7" y2="399.7"/>
+        <line class="edge" style="opacity:.45" data-d="fire water"  x1="428.7" y1="399.7" x2="144.1" y2="192.8"/>
+        <line class="edge" style="opacity:.45" data-d="water earth" x1="144.1" y1="192.8" x2="495.9" y2="192.8"/>
+        <line class="edge" style="opacity:.45" data-d="earth wood"  x1="495.9" y1="192.8" x2="211.3" y2="399.7"/>
+        <line class="edge" style="opacity:.45" data-d="wood metal"  x1="211.3" y1="399.7" x2="320" y2="65"/>
+        <!-- 外五边形轨 -->
+        <line class="edge" data-d="metal earth" x1="320" y1="65"  x2="495.9" y2="192.8"/>
+        <line class="edge" data-d="earth fire"  x1="495.9" y1="192.8" x2="428.7" y2="399.7"/>
+        <line class="edge" data-d="fire wood"   x1="428.7" y1="399.7" x2="211.3" y2="399.7"/>
+        <line class="edge" data-d="wood water"  x1="211.3" y1="399.7" x2="144.1" y2="192.8"/>
+        <line class="edge" data-d="water metal" x1="144.1" y1="192.8" x2="320" y2="65"/>
+
+        <a data-d="metal" href="politics.html" style="--c:#e3d9b8" aria-label="政治 · 权力与秩序">
+          <circle class="node-halo" cx="320" cy="65" r="16"/>
+          <circle class="node-star" cx="320" cy="65" r="4.5"/>
+          <text class="node-label" x="320" y="38" text-anchor="middle">政治</text>
+          <text class="node-lens" x="320" y="98" text-anchor="middle">金 · 权力与秩序</text>
+        </a>
+        <a data-d="earth" href="economy.html" style="--c:#cfa85c" aria-label="经济 · 金钱与时间">
+          <circle class="node-halo" cx="495.9" cy="192.8" r="16"/>
+          <circle class="node-star" cx="495.9" cy="192.8" r="4.5"/>
+          <text class="node-label" x="518" y="198">经济</text>
+          <text class="node-lens" x="518" y="216">土 · 金钱与时间</text>
+        </a>
+        <a data-d="fire" href="tech.html" style="--c:#d96c4f" aria-label="科技 · 工具与创造">
+          <circle class="node-halo" cx="428.7" cy="399.7" r="16"/>
+          <circle class="node-star" cx="428.7" cy="399.7" r="4.5"/>
+          <text class="node-label" x="446" y="428">科技</text>
+          <text class="node-lens" x="446" y="446">火 · 工具与创造</text>
+        </a>
+        <a data-d="wood" href="history.html" style="--c:#7fb069" aria-label="历史 · 记忆与智慧">
+          <circle class="node-halo" cx="211.3" cy="399.7" r="16"/>
+          <circle class="node-star" cx="211.3" cy="399.7" r="4.5"/>
+          <text class="node-label" x="194" y="428" text-anchor="end">历史</text>
+          <text class="node-lens" x="194" y="446" text-anchor="end">木 · 记忆与智慧</text>
+        </a>
+        <a data-d="water" href="cosmos.html" style="--c:#7a9bb8" aria-label="宇宙 · 星海与未知">
+          <circle class="node-halo" cx="144.1" cy="192.8" r="16"/>
+          <circle class="node-star" cx="144.1" cy="192.8" r="4.5"/>
+          <text class="node-label" x="122" y="198" text-anchor="end">宇宙</text>
+          <text class="node-lens" x="122" y="216" text-anchor="end">水 · 星海与未知</text>
+        </a>
+      </svg>
+    </div>
+
+    <div class="dir-list">
+      <a class="dir reveal" style="--accent:#e3d9b8" href="politics.html">
+        <span class="dir-no">Ⅰ</span>
+        <span><span class="dir-name">政治</span><span class="dir-lens">金 · 权力与秩序</span></span>
+        <span><span class="dir-desc">制度、权力与秩序如何塑造社会。看懂规则，才能参与游戏，而不只是被规则塑造。</span><span class="dir-path">政治学导论 → 制度与博弈 → 国际关系 → 现代治理</span></span>
+        <span class="dir-arrow">→</span>
+      </a>
+      <a class="dir reveal" style="--accent:#cfa85c" href="economy.html">
+        <span class="dir-no">Ⅱ</span>
+        <span><span class="dir-name">经济</span><span class="dir-lens">土 · 金钱与时间</span></span>
+        <span><span class="dir-desc">学习投资与复利，理解市场与资源配置，让时间成为你的盟友。</span><span class="dir-path">经济学原理 → 会计与财务 → 投资与复利 → 行为与决策</span></span>
+        <span class="dir-arrow">→</span>
+      </a>
+      <a class="dir reveal" style="--accent:#d96c4f" href="tech.html">
+        <span class="dir-no">Ⅲ</span>
+        <span><span class="dir-name">科技</span><span class="dir-lens">火 · 工具与创造</span></span>
+        <span><span class="dir-desc">编程、AI、网络安全与硬件。掌握工具，更要拥有创造工具的能力。</span><span class="dir-path">TECH 000 工具 → 101 数学 → 102 编程 → 103 系统 → 104 硬件 → 105 安全 → 106 智能 → 107 创造</span></span>
+        <span class="dir-arrow">→</span>
+      </a>
+      <a class="dir reveal" style="--accent:#7fb069" href="history.html">
+        <span class="dir-no">Ⅳ</span>
+        <span><span class="dir-name">历史</span><span class="dir-lens">木 · 记忆与智慧</span></span>
+        <span><span class="dir-desc">前人用血泪总结的经验，是我们最便宜的学费。读史，是为了不重复犯错。</span><span class="dir-path">世界通史 → 中国历史 → 思想史 → 技术史</span></span>
+        <span class="dir-arrow">→</span>
+      </a>
+      <a class="dir reveal" style="--accent:#7a9bb8" href="cosmos.html">
+        <span class="dir-no">Ⅴ</span>
+        <span><span class="dir-name">宇宙</span><span class="dir-lens">水 · 星海与未知</span></span>
+        <span><span class="dir-desc">科学世界观：我们从哪里来，宇宙如何运行。保持谦卑，保持好奇。</span><span class="dir-path">天文学 → 物理学 → 科学方法论 → 演化论</span></span>
+        <span class="dir-arrow">→</span>
+      </a>
+    </div>
+
+    <div class="orbit-more reveal" style="text-align:center">
+      <a class="btn btn-line" href="path.html">肆 · 修习机制 →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>星宙 AstroVerseDAO · 观星书院</span>
+  <span class="footer-dim">开源 · 免费 · 面向每一位求知者 — MMXXVI</span>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
