@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>科技 · TECH 104 硬件 — 星宙 AstroVerseDAO</title>
+<meta name="description" content="TECH 104 硬件（HARDWARE &amp; SIGNALS）：CS 教你与抽象打交道，EE 教你与物理打交道。从传感器收集数据、到信号处理、再到反馈控制，这条链路是机器人、自动驾驶与具身智能的地基，也是通用型 AI 人才的稀缺视野。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<style>body { --accent: var(--fire); }</style>
+</head>
+<body class="dimmer">
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="0.7" transform="rotate(56 16 16)"/>
+    </svg>
+    <span class="brand-word">星宙<em>AstroVerseDAO</em></span>
+  </a>
+  <nav class="topnav">
+    <a href="../manifesto.html">宣言</a>
+    <a href="../directions.html" class="active">航向</a>
+    <a href="../path.html">机制</a>
+    <a href="../join.html" class="nav-cta">入院</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero wrap">
+    <p class="crumb reveal"><a href="../tech.html">科技</a><i>/</i>TECH 104 硬件</p>
+    <p class="page-kicker reveal">第叁航向 · FIRE · 火 — 第伍阶段</p>
+    <h1 class="page-title reveal"><span class="tech-code">TECH 104</span>硬件</h1>
+    <p class="page-lens reveal">HARDWARE &amp; SIGNALS</p>
+    <p class="page-why reveal">CS 教你与抽象打交道，EE 教你与物理打交道。从传感器收集数据、到信号处理、再到反馈控制，这条链路是机器人、自动驾驶与具身智能的地基，也是通用型 AI 人才的稀缺视野。</p>
+    <div class="stage-goalbar reveal"><b>过关项目</b>做一个能「感知世界」的小装置：传感器 → 信号 → 反馈控制。</div>
+  </section>
+
+  <div class="stage-rail wrap reveal">
+    <a class="rail-chip" href="000.html"><b>000</b><span>启航</span></a>
+    <a class="rail-chip" href="101.html"><b>101</b><span>数学</span></a>
+    <a class="rail-chip" href="102.html"><b>102</b><span>编程</span></a>
+    <a class="rail-chip" href="103.html"><b>103</b><span>系统</span></a>
+    <a class="rail-chip on" href="104.html"><b>104</b><span>硬件</span></a>
+    <a class="rail-chip" href="105.html"><b>105</b><span>安全</span></a>
+    <a class="rail-chip" href="106.html"><b>106</b><span>智能</span></a>
+    <a class="rail-chip" href="107.html"><b>107</b><span>创造</span></a>
+  </div>
+
+  <div class="stages-topics wrap">
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">01</span>
+        <div class="stopic-title"><h2>电路基础</h2><p class="stopic-why">模拟世界的入口：从电阻网络到运算放大器。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/ee16ab.html">
+          <span class="opt-school">UC Berkeley</span>
+          <h4>EE16A &amp; EE16B<em>Designing Information Devices and Systems</em></h4>
+          <p class="opt-note">伯克利 EE 大一入门：16A 从环境收集与分析数据，16B 引入反馈与控制。Lab 全部有远程在线版。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>150h</span><span>推荐</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/mit-6002.html">
+          <span class="opt-school">MIT</span>
+          <h4>6.002<em>Circuits and Electronics</em></h4>
+          <p class="opt-note">KVL/KCL、运放、频率响应、半导体基础，OCW 完整录像。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>OCW</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">02</span>
+        <div class="stopic-title"><h2>信号与系统</h2><p class="stopic-why">傅里叶变换给你一个看待世界的全新视角。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/ee120.html">
+          <span class="opt-school">UC Berkeley</span>
+          <h4>EE120<em>Signals and Systems</em></h4>
+          <p class="opt-note">6 个超有趣的 Python 作业：手写 FFT 比拼 Numpy、从手指影像推断心率、给哈勃照片降噪。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>Python</span><span>100h</span><span>推荐</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/mit-6003.html">
+          <span class="opt-school">MIT</span>
+          <h4>6.003<em>Signals and Systems</em></h4>
+          <p class="opt-note">全部课程录影 + 书面作业及答案开放。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>OCW</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">03</span>
+        <div class="stopic-title"><h2>控制论</h2><p class="stopic-why">系统如何被反馈塑造——AI 智能体的理论前身。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/ee16b.html">
+          <span class="opt-school">UC Berkeley</span>
+          <h4>EE16B<em>反馈与控制入门</em></h4>
+          <p class="opt-note">控制论的第一课，与 EE16A 衔接。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>入门</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/ee263.html">
+          <span class="opt-school">Stanford</span>
+          <h4>EE263<em>Introduction to Linear Dynamical Systems</em></h4>
+          <p class="opt-note">状态空间、稳定性、可控可观性——走向机器人与自动驾驶的必修。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>进阶</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <nav class="cycle" aria-label="阶段循环导航">
+    <a href="103.html" style="--c:var(--fire)"><span class="cyc-label">← 上一阶段 · TECH 103</span><div class="cyc-name">系统</div></a>
+    <a href="105.html" style="--c:var(--fire)"><span class="cyc-label">下一阶段 · TECH 105 →</span><div class="cyc-name">安全</div></a>
+  </nav>
+</main>
+
+<footer class="footer">
+  <span>星宙 AstroVerseDAO · 观星书院</span>
+  <span class="footer-dim">开源 · 免费 · 面向每一位求知者 — MMXXVI</span>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

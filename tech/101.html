@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>科技 · TECH 101 数学 — 星宙 AstroVerseDAO</title>
+<meta name="description" content="TECH 101 数学（MATHEMATICS）：学好微积分和线代，和写代码至少同等重要。数学不是考完就忘的考题，而是理解 AI、信号、控制乃至世界运行方式的语言。学本质，不背公式。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<style>body { --accent: var(--fire); }</style>
+</head>
+<body class="dimmer">
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="0.7" transform="rotate(56 16 16)"/>
+    </svg>
+    <span class="brand-word">星宙<em>AstroVerseDAO</em></span>
+  </a>
+  <nav class="topnav">
+    <a href="../manifesto.html">宣言</a>
+    <a href="../directions.html" class="active">航向</a>
+    <a href="../path.html">机制</a>
+    <a href="../join.html" class="nav-cta">入院</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero wrap">
+    <p class="crumb reveal"><a href="../tech.html">科技</a><i>/</i>TECH 101 数学</p>
+    <p class="page-kicker reveal">第叁航向 · FIRE · 火 — 第贰阶段</p>
+    <h1 class="page-title reveal"><span class="tech-code">TECH 101</span>数学</h1>
+    <p class="page-lens reveal">MATHEMATICS</p>
+    <p class="page-why reveal">学好微积分和线代，和写代码至少同等重要。数学不是考完就忘的考题，而是理解 AI、信号、控制乃至世界运行方式的语言。学本质，不背公式。</p>
+    <div class="stage-goalbar reveal"><b>过关项目</b>用 LaTeX 写一份数学笔记，把一个定理推导到底并配一张可视化图。</div>
+  </section>
+
+  <div class="stage-rail wrap reveal">
+    <a class="rail-chip" href="000.html"><b>000</b><span>启航</span></a>
+    <a class="rail-chip on" href="101.html"><b>101</b><span>数学</span></a>
+    <a class="rail-chip" href="102.html"><b>102</b><span>编程</span></a>
+    <a class="rail-chip" href="103.html"><b>103</b><span>系统</span></a>
+    <a class="rail-chip" href="104.html"><b>104</b><span>硬件</span></a>
+    <a class="rail-chip" href="105.html"><b>105</b><span>安全</span></a>
+    <a class="rail-chip" href="106.html"><b>106</b><span>智能</span></a>
+    <a class="rail-chip" href="107.html"><b>107</b><span>创造</span></a>
+  </div>
+
+  <div class="stages-topics wrap">
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">01</span>
+        <div class="stopic-title"><h2>微积分</h2><p class="stopic-why">变化率与累积——一切连续现象的母语。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/mit-1801sc.html">
+          <span class="opt-school">MIT</span>
+          <h4>18.01SC / 18.02SC<em>单变量与多变量微积分</em></h4>
+          <p class="opt-note">OCW 完整开放，notes 浅显生动、直抓本质，不再疲于做题。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>OCW</span><span>推荐</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/essence-of-calculus.html">
+          <span class="opt-school">3Blue1Brown</span>
+          <h4>微积分的本质<em>Essence of Calculus</em></h4>
+          <p class="opt-note">用动画直抵微积分的几何直觉，配合 MIT 课程食用更佳。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>视频</span><span>直觉</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">02</span>
+        <div class="stopic-title"><h2>线性代数</h2><p class="stopic-why">矩阵、向量空间、特征分解——神经网络与数据科学的基础。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/mit-1806.html">
+          <span class="opt-school">MIT</span>
+          <h4>18.06<em>Linear Algebra（Gilbert Strang）</em></h4>
+          <p class="opt-note">数学大牛 Strang 的经典课，教材已被清华采用。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>OCW</span><span>推荐</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/essence-of-linalg.html">
+          <span class="opt-school">3Blue1Brown</span>
+          <h4>线性代数的本质<em>Essence of Linear Algebra</em></h4>
+          <p class="opt-note">把「矩阵即变换」刻进直觉，看完再看任何一门课都会轻松很多。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>视频</span><span>直觉</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">03</span>
+        <div class="stopic-title"><h2>离散数学与概率论</h2><p class="stopic-why">算法推导与证明的工具，高阶课程的先修。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/cs70.html">
+          <span class="opt-school">UC Berkeley</span>
+          <h4>CS70<em>Discrete Math and Probability Theory</em></h4>
+          <p class="opt-note">每个模块都配算法实例：逻辑→稳定匹配、数论→RSA、概率→哈希与负载均衡。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>60h</span><span>推荐</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/mit-6042.html">
+          <span class="opt-school">MIT</span>
+          <h4>6.042J<em>Mathematics for Computer Science</em></h4>
+          <p class="opt-note">面向 CS 的离散数学，教材《Mathematics for CS》免费开源。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>OCW</span><span>开源教材</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/cs126.html">
+          <span class="opt-school">UC Berkeley</span>
+          <h4>CS126<em>Probability Theory（进阶）</em></h4>
+          <p class="opt-note">随机过程与深入理论，大量 Python 作业让你用代码验证概率。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>进阶</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">04</span>
+        <div class="stopic-title"><h2>信息论入门</h2><p class="stopic-why">编码、压缩、信息熵——AI 时代理解数据本质的核心。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/mit-6050.html">
+          <span class="opt-school">MIT</span>
+          <h4>6.050J<em>Information Theory and Entropy</em></h4>
+          <p class="opt-note">专为大一新生设计，几乎零先修：编码、压缩、通信、信息熵，非常有趣。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>零基础</span><span>推荐</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">05</span>
+        <div class="stopic-title"><h2>数值分析（选修）</h2><p class="stopic-why">用离散的计算机逼近连续的数学——计算思维。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/mit-ct-julia.html">
+          <span class="opt-school">MIT</span>
+          <h4>Computational Thinking<em>计算思维入门（Julia）</em></h4>
+          <p class="opt-note">全部开源：图像处理、社科数据、气候建模三个主题里体验计算与科学的结合。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>Julia</span><span>零基础</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/mit-18330.html">
+          <span class="opt-school">MIT</span>
+          <h4>18.330<em>Introduction to Numerical Analysis</em></h4>
+          <p class="opt-note">浮点编码、求根、线性系统、微分方程；配套开源教材与 Julia 实例。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>进阶</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">06</span>
+        <div class="stopic-title"><h2>微分方程（选修）</h2><p class="stopic-why">用方程刻画世间万物的运动，换一个视角看世界。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/mit-1803sc.html">
+          <span class="opt-school">MIT</span>
+          <h4>18.03SC<em>Differential Equations</em></h4>
+          <p class="opt-note">常微分方程的求解与直觉，OCW 完整开放。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>OCW</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">07</span>
+        <div class="stopic-title"><h2>数学高阶（按需自取）</h2><p class="stopic-why">面向科研与高阶工程，兴趣驱动。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/ee364a.html">
+          <span class="opt-school">Stanford</span>
+          <h4>EE364A<em>Convex Optimization 凸优化</em></h4>
+          <p class="opt-note">机器学习的数学地基。Boyd 主讲，教材《Convex Optimization》免费开源。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>★★★★</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/mit-18650.html">
+          <span class="opt-school">MIT</span>
+          <h4>18.650<em>Statistics for Applications 应用统计</em></h4>
+          <p class="opt-note">面向应用的统计学研究生课，讲义完整开放。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>★★★★</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/cs255.html">
+          <span class="opt-school">Stanford</span>
+          <h4>CS255<em>Cryptography 密码学</em></h4>
+          <p class="opt-note">Dan Boneh 的密码学课，Coursera 版本免费开放。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>★★★★</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <nav class="cycle" aria-label="阶段循环导航">
+    <a href="000.html" style="--c:var(--fire)"><span class="cyc-label">← 上一阶段 · TECH 000</span><div class="cyc-name">启航</div></a>
+    <a href="102.html" style="--c:var(--fire)"><span class="cyc-label">下一阶段 · TECH 102 →</span><div class="cyc-name">编程</div></a>
+  </nav>
+</main>
+
+<footer class="footer">
+  <span>星宙 AstroVerseDAO · 观星书院</span>
+  <span class="footer-dim">开源 · 免费 · 面向每一位求知者 — MMXXVI</span>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>科技 · TECH 107 创造 — 星宙 AstroVerseDAO</title>
+<meta name="description" content="TECH 107 创造（BUILD &amp; CRAFT）：知识最终要变成作品。这一层没有固定路径：学会写高质量的工程代码，做出能给别人用的东西——一个网站、一个渲染器、一个开源项目。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/style.css" />
+<style>body { --accent: var(--fire); }</style>
+</head>
+<body class="dimmer">
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="../index.html">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="16" cy="16" rx="14" ry="5.4" fill="none" stroke="currentColor" stroke-width="0.7" transform="rotate(56 16 16)"/>
+    </svg>
+    <span class="brand-word">星宙<em>AstroVerseDAO</em></span>
+  </a>
+  <nav class="topnav">
+    <a href="../manifesto.html">宣言</a>
+    <a href="../directions.html" class="active">航向</a>
+    <a href="../path.html">机制</a>
+    <a href="../join.html" class="nav-cta">入院</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero wrap">
+    <p class="crumb reveal"><a href="../tech.html">科技</a><i>/</i>TECH 107 创造</p>
+    <p class="page-kicker reveal">第叁航向 · FIRE · 火 — 第捌阶段</p>
+    <h1 class="page-title reveal"><span class="tech-code">TECH 107</span>创造</h1>
+    <p class="page-lens reveal">BUILD &amp; CRAFT</p>
+    <p class="page-why reveal">知识最终要变成作品。这一层没有固定路径：学会写高质量的工程代码，做出能给别人用的东西——一个网站、一个渲染器、一个开源项目。</p>
+    <div class="stage-goalbar reveal"><b>过关项目</b>上线一个你自己的 Web 作品，或完成一个软光栅化渲染器。</div>
+  </section>
+
+  <div class="stage-rail wrap reveal">
+    <a class="rail-chip" href="000.html"><b>000</b><span>启航</span></a>
+    <a class="rail-chip" href="101.html"><b>101</b><span>数学</span></a>
+    <a class="rail-chip" href="102.html"><b>102</b><span>编程</span></a>
+    <a class="rail-chip" href="103.html"><b>103</b><span>系统</span></a>
+    <a class="rail-chip" href="104.html"><b>104</b><span>硬件</span></a>
+    <a class="rail-chip" href="105.html"><b>105</b><span>安全</span></a>
+    <a class="rail-chip" href="106.html"><b>106</b><span>智能</span></a>
+    <a class="rail-chip on" href="107.html"><b>107</b><span>创造</span></a>
+  </div>
+
+  <div class="stages-topics wrap">
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">01</span>
+        <div class="stopic-title"><h2>软件工程</h2><p class="stopic-why">「能跑」的代码和工业级代码有本质区别。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/mit-6031.html">
+          <span class="opt-school">MIT</span>
+          <h4>6.031（原 6.005）<em>Software Construction</em></h4>
+          <p class="opt-note">如何写不易出 bug、简明易懂、易于维护的代码——强烈建议低年级就学。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>Java</span><span>推荐</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/cs169.html">
+          <span class="opt-school">UC Berkeley</span>
+          <h4>CS169<em>Software Engineering（Agile + SaaS）</em></h4>
+          <p class="opt-note">小团队敏捷开发与云服务模式，配套教材免费在线。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>进阶</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">02</span>
+        <div class="stopic-title"><h2>Web 开发</h2><p class="stopic-why">搭个人主页、给项目做展示、成为独立开发者。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/mit-weblab.html">
+          <span class="opt-school">MIT</span>
+          <h4>Web Lab<em>Web 开发两周速成</em></h4>
+          <p class="opt-note">IAP 短课，快速掌握前后端全栈开发。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>速成</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/cs142.html">
+          <span class="opt-school">Stanford</span>
+          <h4>CS142<em>Web Applications</em></h4>
+          <p class="opt-note">想系统学习 Web 应用的正经选择。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>系统</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/fullstackopen.html">
+          <span class="opt-school">赫尔辛基大学</span>
+          <h4>Full Stack Open<em>现代全栈开发</em></h4>
+          <p class="opt-note">React + Node 的免费开源课程，有官方中文版。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>中文</span><span>免费</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+    <section class="stopic reveal">
+      <div class="stopic-head">
+        <span class="stopic-code">03</span>
+        <div class="stopic-title"><h2>计算机图形学</h2><p class="stopic-why">用代码创造视觉的世界。</p></div>
+      </div>
+      <div class="opts">
+        <a class="opt" href="course/games101.html">
+          <span class="opt-school">GAMES</span>
+          <h4>101<em>现代计算机图形学入门（闫令琪）</em></h4>
+          <p class="opt-note">公认最好的图形学入门：7 次作业实现一个软光栅化渲染器，中文授课。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>中文</span><span>C++</span><span>推荐</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/games103-202.html">
+          <span class="opt-school">GAMES</span>
+          <h4>103 / 202<em>物理仿真 / 实时渲染（进阶）</em></h4>
+          <p class="opt-note">GAMES 系列的进阶课：基于物理的动画与高质量实时渲染。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>进阶</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+        <a class="opt" href="course/cs148.html">
+          <span class="opt-school">Stanford</span>
+          <h4>CS148<em>Introduction to Computer Graphics</em></h4>
+          <p class="opt-note">斯坦福的图形学导论，英文路线之选。</p>
+          <span class="opt-foot">
+            <span class="opt-tags"><span>英文</span></span>
+            <span class="opt-go">查看评价 →</span>
+          </span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <nav class="cycle" aria-label="阶段循环导航">
+    <a href="106.html" style="--c:var(--fire)"><span class="cyc-label">← 上一阶段 · TECH 106</span><div class="cyc-name">智能</div></a>
+    <a href="000.html" style="--c:var(--fire)"><span class="cyc-label">下一阶段 · TECH 000 →</span><div class="cyc-name">启航</div></a>
+  </nav>
+</main>
+
+<footer class="footer">
+  <span>星宙 AstroVerseDAO · 观星书院</span>
+  <span class="footer-dim">开源 · 免费 · 面向每一位求知者 — MMXXVI</span>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
